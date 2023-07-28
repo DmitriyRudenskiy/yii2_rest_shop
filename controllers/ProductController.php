@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-class ProductController extends \yii\rest\ActiveController
+class ProductController extends Controller
 {
     public $modelClass = 'app\models\Product';
 

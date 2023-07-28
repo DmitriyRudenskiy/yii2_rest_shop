@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-class ProviderController extends \yii\rest\ActiveController
+class ProviderController extends Controller
 {
     public $modelClass = 'app\models\Provider';
 
