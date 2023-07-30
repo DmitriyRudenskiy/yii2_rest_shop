@@ -629,8 +629,8 @@ trait ApiTesterActions
      * @part json
      * @see \Codeception\Module\REST::seeResponseIsValidOnJsonSchemaString()
      */
-    public function seeResponseIsValidOnJsonSchemaString(string $schema): void {
-        $this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseIsValidOnJsonSchemaString', func_get_args()));
+    public function seeResponseIsValidOnJsonSchemaString(string $schema): string {
+        return (string)$this->getScenario()->runStep(new \Codeception\Step\Assertion('seeResponseIsValidOnJsonSchemaString', func_get_args()));
     }
 
     /**

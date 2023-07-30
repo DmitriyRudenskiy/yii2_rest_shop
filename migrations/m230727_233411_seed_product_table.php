@@ -17,8 +17,8 @@ class m230727_233411_seed_product_table extends Migration
             $this->insert(
                 'product',
                 [
-                    'name'         => $generator->catchPhrase,
-                    'description'       => $generator->paragraph,
+                    'name' => $generator->name,
+                    'description' => $generator->paragraph,
                 ]
             );
         }

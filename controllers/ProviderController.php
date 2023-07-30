@@ -2,12 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\Provider;
+
 class ProviderController extends Controller
 {
-    public $modelClass = 'app\models\Provider';
-
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
+    public $modelClass = Provider::class;
 }

@@ -18,7 +18,7 @@ class ProviderCest
         $apiTester->seeResponseIsJson();
         $apiTester->seeResponseIsValidOnJsonSchemaString('{"type":"array"}');
 
-        $validResponseJsonSchema = json_encode(
+        $validResponseJsonSchema = (string)json_encode(
             [
                 'properties' => [
                     'id'         => ['type' => 'integer'],
@@ -38,7 +38,7 @@ class ProviderCest
         $apiTester->seeResponseIsJson();
         $apiTester->seeResponseIsValidOnJsonSchemaString('{"type":"object"}');
 
-        $validResponseJsonSchema = json_encode(
+        $validResponseJsonSchema = (string)json_encode(
             [
                 'properties' => [
                     'id'         => ['type' => 'integer'],

@@ -2,12 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\Product;
+
 class ProductController extends Controller
 {
-    public $modelClass = 'app\models\Product';
-
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
+    public $modelClass = Product::class;
 }

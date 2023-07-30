@@ -1,6 +1,8 @@
 includes:
 	- vendor/proget-hq/phpstan-yii2/extension.neon
 parameters:
+    scanFiles:
+          - config/__autocomplete.php
     yii2:
         config_path: %rootDir%/../../../config/test.php
     excludePaths:
