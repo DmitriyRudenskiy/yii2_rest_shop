@@ -10,7 +10,7 @@ class m230728_054925_create_product_rating_table extends Migration
     /**
      * {@inheritdoc}
      */
-    public function safeUp()
+    public function safeUp(): void
     {
         $this->createTable('product_rating', [
             'id' => $this->primaryKey(),
@@ -24,7 +24,7 @@ class m230728_054925_create_product_rating_table extends Migration
     /**
      * {@inheritdoc}
      */
-    public function safeDown()
+    public function safeDown(): void
     {
         $this->dropTable('product_rating');
     }

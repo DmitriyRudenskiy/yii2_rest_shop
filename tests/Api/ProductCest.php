@@ -1,17 +1,16 @@
 <?php
 
+namespace Tests\Api;
 
-namespace Api;
-
-use \ApiTester;
+use Tests\Support\ApiTester;
 use Codeception\Util\HttpCode;
 use Faker\Factory;
 
-class ProviderCest
+class ProductCest
 {
-    private const URL = 'providers';
+    private const URL = 'products';
 
-    public function getAllProviders(ApiTester $apiTester): void
+    public function getAllProducts(ApiTester $apiTester): void
     {
         $apiTester->sendGet(self::URL);
         $apiTester->seeResponseCodeIs(HttpCode::OK);
@@ -30,7 +29,7 @@ class ProviderCest
         $apiTester->seeResponseIsValidOnJsonSchemaString($validResponseJsonSchema);
     }
 
-    public function getProvider(ApiTester $apiTester): void
+    public function getProduct(ApiTester $apiTester): void
     {
 
         $apiTester->sendGet(self::URL . '/1');
@@ -50,7 +49,7 @@ class ProviderCest
         $apiTester->seeResponseIsValidOnJsonSchemaString($validResponseJsonSchema);
     }
 
-    public function createNewProvider(ApiTester $apiTester): void
+    public function createNewProduct(ApiTester $apiTester): void
     {
 
         $generator = Factory::create();
@@ -70,7 +69,7 @@ class ProviderCest
         );
     }
 
-    public function updateProvider(ApiTester $apiTester): void
+    public function updateProduct(ApiTester $apiTester): void
     {
 
         $generator = Factory::create();
@@ -86,7 +85,7 @@ class ProviderCest
         $apiTester->seeResponseContainsJson(['name' => $newName]);
     }
 
-    public function deleteProvider(ApiTester $apiTester): void
+    public function deleteProduct(ApiTester $apiTester): void
     {
 
         $url = self::URL . '/1';

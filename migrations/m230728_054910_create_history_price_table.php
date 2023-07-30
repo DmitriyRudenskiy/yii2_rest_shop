@@ -10,7 +10,7 @@ class m230728_054910_create_history_price_table extends Migration
     /**
      * {@inheritdoc}
      */
-    public function safeUp()
+    public function safeUp(): void
     {
         $this->createTable('history_price', [
             'id' => $this->primaryKey(),
@@ -62,10 +62,9 @@ class m230728_054910_create_history_price_table extends Migration
             'type_price',
             'id',
         );
-
     }
 
-    public function safeDown()
+    public function safeDown(): void
     {
         $this->dropForeignKey('fk_history_price_provider_id', 'history_price');
         $this->dropIndex('idx_history_price_provider_id', 'history_price');

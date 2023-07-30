@@ -1,7 +1,9 @@
 <?php
 
-declare(strict_types=1);
+namespace Tests\Support;
 
+use Codeception\Actor;
+use Tests\Support\_generated\ApiTesterActions;
 
 /**
  * Inherited Methods
@@ -18,11 +20,7 @@ declare(strict_types=1);
  *
  * @SuppressWarnings(PHPMD)
 */
-class ApiTester extends \Codeception\Actor
+class ApiTester extends Actor
 {
-    use _generated\ApiTesterActions;
-
-    /**
-     * Define custom actions here
-     */
+    use ApiTesterActions;
 }

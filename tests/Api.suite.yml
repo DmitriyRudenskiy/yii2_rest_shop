@@ -8,3 +8,4 @@ modules:
               configFile: 'config/test.php'
     config:
         - Yii2
+

@@ -35,7 +35,13 @@
         "symfony/browser-kit": "^6.0 || >=2.7 <=4.2.4",
         "codeception/module-rest": "^3.3",
         "rector/rector": "^0.17.7",
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+        "proget-hq/phpstan-yii2": "^0.8.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "config": {
         "allow-plugins": {
@@ -47,6 +53,7 @@
         }
     },
     "scripts": {
+        "stan": "vendor/bin/phpstan analyse --level=9 .",
         "recor": "./vendor/bin/rector process . --dry-run",
         "code-style": "./vendor/bin/phpcs --extensions=php --ignore='*/vendor/*,*/tests/_support/*,*/config/__autocomplete.php' .",
         "code-style-fix": "vendor/bin/phpcbf --extensions=php --ignore='*/vendor/*,*/tests/_support/*,*/config/__autocomplete.php' .",
